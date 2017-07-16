@@ -38,17 +38,17 @@ and in cmd npm i
 
 Common structure of tasks writing:
 gulp.task('mytask', function () {
-  return gulp.src('source-files') // Выборка исходных файлов для обработки плагином
-    .pipe(plugin()) // Вызов Gulp плагина для обработки файла
-    .pipe(gulp.dest('folder')) // Вывод результирующего файла в папку назначения (dest - пункт назначения)
+  return gulp.src('source-files') // Selecting of source files for plugin processing
+    .pipe(plugin()) // Call Gulp files for plugin processing
+    .pipe(gulp.dest('folder')) // Outputting the resulting file to the destination folder (dest - destination)
 })
 
 -------------------------------------------------------------------------------------------------------------------------
 Selecting files:
-*.sass - выбирает все файлы, имеющие определенное расширение (в данном случае, .sass) в корневой папке проекта.
-**/*.js - выбирает все файлы с расширением .js во всех папках проекта.
-!header.sass - исключает файл из общей выборки
-*.+(scss|sass) - задает комплексный шаблон для нескольких типов файлов, разделенных вертикальной чертой. В данном примере в выборкупопадут любые sass и scss файлы в корне проекта.
+*.sass - Selects all files that have a specific extension (in this case, .sass) in the project's root folder.
+**/*.js - Selects all files with the .js extension in all project folders.
+!header.sass - Exclude file from the general sample
+*.+(scss|sass) - Specifies a complex template for several file types, separated by a vertical bar. In this example, any sass and scss files in the project root will be included in the sample.
 
 Details:					https://en.wikipedia.org/wiki/Glob_(programming)
 
